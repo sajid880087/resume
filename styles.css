@@ -14,39 +14,84 @@
         font-size: 1.2rem; /* Slightly smaller font for mobile */
     }
 
-    .header {
-        padding: 15px 5%; /* Reduce padding for a smaller header on mobile */
+    .hero-content h1 {
+        font-size: 3.5rem; /* Adjusted to prevent text overflow on smaller screens */
     }
 
-    .logo-img {
-        width: 120px; /* Slightly smaller logo */
+    .hero-content p {
+        font-size: 1.8rem; /* Adjusted for better readability */
+    }
+
+    .btn {
+        font-size: 1.2rem; /* Slightly smaller button */
+        padding: 12px 30px; /* Smaller button size */
+    }
+
+    .section h2 {
+        font-size: 2.8rem; /* Reduced font size for titles in sections */
+    }
+
+    #skills li {
+        font-size: 1.6rem; /* Smaller font size for mobile devices */
+    }
+
+    .project-section h2 {
+        font-size: 2.8rem; /* Adjusted project section title */
+    }
+
+    .project-card {
+        width: 280px; /* Adjusted width for better mobile layout */
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem; /* Adjusted font size for contact section */
+    }
+
+    .contact-box {
+        width: 100%; /* Full-width boxes */
+        min-height: 150px; /* Adjusted height for better mobile view */
+    }
+
+    .contact-box i {
+        font-size: 2rem; /* Slightly smaller icons */
+    }
+
+    .contact-box a {
+        font-size: 1.4rem; /* Smaller links */
+    }
+
+    .nav-links li a {
+        font-size: 1.4rem; /* Slightly smaller font for mobile navigation */
     }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        flex-direction: column; /* Stack logo and nav links vertically */
-        align-items: center; /* Center align items */
+    .hero-content h1 {
+        font-size: 2.8rem; /* Reduced font size for smaller screens */
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px; /* Even smaller gap */
+    .hero-content p {
+        font-size: 1.6rem; /* Adjusted text for readability */
     }
 
-    .nav-link {
-        font-size: 1rem; /* Further reduced font size for mobile */
+    .btn {
+        font-size: 1.1rem; /* Smaller button size for mobile screens */
+        padding: 10px 25px; /* Reduced padding */
     }
 
-    .header {
-        padding: 10px 3%; /* Further reduce header padding */
+    .section h2 {
+        font-size: 2.4rem; /* Smaller section titles */
     }
 
-    .logo-img {
-        width: 100px; /* Even smaller logo */
+    .project-section h2 {
+        font-size: 2.4rem; /* Smaller project section titles */
+    }
+
+    .contact-section h2 {
+        font-size: 2.2rem; /* Adjusted font size for contact section */
     }
 
     .nav-links li a {
-        font-size: 1.2rem; /* Slightly smaller nav links on mobile */
+        font-size: 1.2rem; /* Adjusted font size for mobile navigation */
     }
 }
