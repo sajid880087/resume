@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Typing Effect for Hero Section
     const typingElement = document.getElementById("typing-text");
-    const texts = ["Python Developer", "AI Enthusiast", "Web Developer"];
+    const texts = ["Python Developer"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
