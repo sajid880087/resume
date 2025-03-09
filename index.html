@@ -7,26 +7,27 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/fev.webp">
+    <!-- Removed duplicate Font Awesome script -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <!-- Header Section -->
     <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="logo.png" alt="Sajid Logo" class="logo-img">
+        <div class="navbar">
+            <img src="ss.png" alt="Logo" class="logo-img">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i> <!-- Font Awesome Bars Icon for the mobile menu -->
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Services</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
-
+    
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -103,6 +104,9 @@
         </div>
         <p class="extra-info">Available on multiple platforms.</p>
     </section>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script src="script.js"></script>
 </body>
 
 </html>
