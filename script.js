@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Typing Effect for Dynamic Name
     const nameElement = document.getElementById("dynamic-name");
-    const names = ["Sajid Inamdar", "Developer", "AI Enthusiast", "Tech Lover"];
+    const names = ["Sajid Inamdar", "Coding Lover"];
     let nameIndex = 0;
     let charIndexName = 0;
     let isDeletingName = false;
