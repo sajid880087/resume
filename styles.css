@@ -739,6 +739,25 @@ body {
         font-size: 2.5rem;
     }
 
+    /* Custom Scrollbar for Mobile View */
+@media (max-width: 768px) {
+    /* Scrollbar styling for the body */
+    body::-webkit-scrollbar {
+        width: 8px; /* Adjust width of the scrollbar */
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #00ffcc; /* Color for the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners */
+        border: 2px solid #0a0a0a; /* Border around the thumb */
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #333; /* Background color of the scrollbar track */
+        border-radius: 10px; /* Rounded corners for track */
+    }
+}
+
     .contact-container {
         padding: 0 15px;
     }
