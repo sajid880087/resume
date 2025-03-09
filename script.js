@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let charIndex = 0;
     let isDeleting = false;
 
-    function typeEffect() {
+    function typeEffectHero() {
         let currentText = texts[textIndex];
         if (isDeleting) {
             typingElement.textContent = currentText.substring(0, charIndex - 1);
@@ -29,50 +29,50 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!isDeleting && charIndex === currentText.length) {
             isDeleting = true;
-            setTimeout(typeEffect, 1000); // Pause before deleting
-        } else if (isDeldocument.addEventListener("DOMContentLoaded", function() {
-            const nameElement = document.getElementById("dynamic-name");
-            const names = ["Sajid Inamdar", "Developer", "AI Enthusiast", "Tech Lover"];
-            let nameIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typingSpeed = 50; // Adjust this for faster typing
-            const pauseTime = 500; // Pause time after a name is fully typed
-        
-            // Function to type the name dynamically
-            function typeEffect() {
-                const currentName = names[nameIndex];
-        
-                if (isDeleting) {
-                    nameElement.textContent = currentName.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    nameElement.textContent = currentName.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-        
-                if (!isDeleting && charIndex === currentName.length) {
-                    isDeleting = true;
-                    setTimeout(typeEffect, pauseTime); // Pause before deleting
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    nameIndex = (nameIndex + 1) % names.length; // Move to next name in the list
-                }
-        
-                setTimeout(typeEffect, isDeleting ? typingSpeed / 2 : typingSpeed); // Adjust for faster typing
-            }
-        
-            typeEffect(); // Start typing effect
-        });
-        
+            setTimeout(typeEffectHero, 1000); // Pause before deleting
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length; // Move to next text
+            setTimeout(typeEffectHero, 500); // Pause between texts
+        } else {
+            setTimeout(typeEffectHero, isDeleting ? 50 : 100); // Adjust typing speed
+        }
+    }
+    typeEffectHero(); // Start typing effect for hero section
 
-// Mobile Menu Toggle
-document.getElementById("menu-icon").addEventListener("click", function() {
-    document.querySelector(".navbar").classList.toggle("active");
-});
+    // Typing Effect for Dynamic Name
+    const nameElement = document.getElementById("dynamic-name");
+    const names = ["Sajid Inamdar", "Developer", "AI Enthusiast", "Tech Lover"];
+    let nameIndex = 0;
+    let charIndexName = 0;
+    let isDeletingName = false;
 
+    function typeEffectName() {
+        const currentName = names[nameIndex];
+        
+        if (isDeletingName) {
+            nameElement.textContent = currentName.substring(0, charIndexName - 1);
+            charIndexName--;
+        } else {
+            nameElement.textContent = currentName.substring(0, charIndexName + 1);
+            charIndexName++;
+        }
 
-// Mobile Menu Toggle
-document.getElementById("menu-icon").addEventListener("click", function() {
-    document.querySelector(".navbar").classList.toggle("active");
+        if (!isDeletingName && charIndexName === currentName.length) {
+            isDeletingName = true;
+            setTimeout(typeEffectName, 1000); // Pause before deleting
+        } else if (isDeletingName && charIndexName === 0) {
+            isDeletingName = false;
+            nameIndex = (nameIndex + 1) % names.length; // Move to next name in the list
+            setTimeout(typeEffectName, 500); // Pause between names
+        } else {
+            setTimeout(typeEffectName, isDeletingName ? 50 : 100); // Adjust typing speed
+        }
+    }
+    typeEffectName(); // Start typing effect for dynamic name
+
+    // Mobile Menu Toggle
+    document.getElementById("menu-icon").addEventListener("click", function() {
+        document.querySelector(".navbar").classList.toggle("active");
+    });
 });
