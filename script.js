@@ -40,3 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     typeEffect(); // Start typing effect
 });
+
+// Mobile Menu Toggle
+document.getElementById("menu-icon").addEventListener("click", function() {
+    document.querySelector(".navbar").classList.toggle("active");
+});
