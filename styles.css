@@ -7,12 +7,16 @@
     scroll-behavior: smooth;
 }
 
+body, html {
+    height: 100%; /* Ensure body and html take full height */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
 body {
     background-color: #0a0a0a; /* Darker background */
     color: #ffffff;
+    overflow-y: auto; /* Allow vertical scrolling */
 }
-
-
 
 
 /* Header Styling */
@@ -80,33 +84,52 @@ body {
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack the logo and nav links vertically */
-        align-items: center; /* Center align the navbar content */
-        height: 130px; /* Set the height of the navbar */
-        padding: 10px 0; /* Add padding to give space around the navbar */
-        display: flex; /* Make sure the navbar is a flex container */
-        justify-content: center; /* Center the content vertically */
+        flex-direction: row;
+        align-items: center;
+        height: 60px; /* Adjust height for mobile */
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .nav-links {
-        flex-direction: row; /* Display nav links in a row */
-        width: auto; /* Set width to auto to prevent it from stretching */
-        font-size: 14px; /* Adjust font size */
-        gap: 15px; /* Set a gap between the links */
-        justify-content: center; /* Center the nav links horizontally */
-        display: flex; /* Make nav-links a flex container */
-        align-items: center; /* Vertically center the nav items */
-        margin-top: -30px; /* Move the nav links 30px higher */
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px;
+        position: absolute;
+        top: 60px; /* Position below navbar */
+        right: 10px;
+        background-color: #333; /* Dark background for the menu */
+        width: 200px; /* Adjust the width of the menu */
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
     
     .nav-link {
-        font-size: 1.1rem; /* Adjust font size for the individual nav links */
+        font-size: 1rem; /* Adjust font size */
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .menu-icon {
+        font-size: 1.5rem; /* Bigger icon size */
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .navbar.active .nav-links {
+        display: flex; /* Show links when menu is active */
     }
 }
 
 
-
-
+    .hero {
+        margin-top: 70px;
+        padding: 30px 0;
+    }
 
 /* Hero Section */
 .hero {
@@ -124,6 +147,17 @@ body {
     box-shadow: 0 0 40px rgba(0, 255, 204, 0.5);
     animation: heroGlow 3s infinite alternate ease-in-out;
 }
+
+/* Glowing border effect */
+@keyframes heroGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 50px rgba(0, 255, 204, 0.8);
+    }
+}
+
 
 /* Glowing border effect */
 @keyframes heroGlow {
