@@ -81,19 +81,28 @@ body {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack the logo and nav links vertically */
-        align-items: flex-start;
-        heigt:70px;
+        align-items: center; /* Center align the navbar content */
+        height: 130px; /* Set the height of the navbar */
+        padding: 10px 0; /* Add padding to give space around the navbar */
+        display: flex; /* Make sure the navbar is a flex container */
+        justify-content: center; /* Center the content vertically */
     }
-
+    
     .nav-links {
-        flex-direction: column;
-        gap: 15px; /* Smaller gap between items on mobile */
+        flex-direction: row; /* Display nav links in a row */
+        width: auto; /* Set width to auto to prevent it from stretching */
+        font-size: 14px; /* Adjust font size */
+        gap: 15px; /* Set a gap between the links */
+        justify-content: center; /* Center the nav links horizontally */
+        display: flex; /* Make nav-links a flex container */
+        align-items: center; /* Vertically center the nav items */
+        margin-top: -30px; /* Move the nav links 30px higher */
     }
-
+    
     .nav-link {
-        font-size: 1.2rem; /* Slightly smaller font for mobile */
+        font-size: 1.1rem; /* Adjust font size for the individual nav links */
     }
-}
+    
 
 
 
